@@ -13,8 +13,8 @@ map("n", "<leader><C-s>", "<cmd>w<cr><cmd>so<cr>", opts) -- save and source curr
 -- Close
 map("n", "<leader>q", "<cmd>q<cr>", opts)
 
--- NETRW
-map("n", "<leader>e", "<cmd>Ex<cr>", opts)
+-- NeoTree
+map("n", "<leader>e", "<cmd>Neotree filesystem reveal bottom<cr>", opts)
 
 -- Lazy
 map("n", "<leader>l", "<cmd>Lazy<cr>", opts)
@@ -38,7 +38,9 @@ map("n", "<leader>sh", "<cmd>Telescope help_tags theme=ivy<cr>", opts)
 map("n", "<leader>sk", "<cmd>Telescope keymaps theme=ivy<cr>", opts)
 
 -- Buffers
-map("n", "<leader>x", "<cmd>bdelete!<cr>", opts)
+map("n", "<leader>x", "<cmd>bdelete!<cr>", opts) -- delete current buffer
+map("n", "<leader>]", "<cmd>bnext<cr>", opts) -- next buffer
+map("n", "<leader>[", "<cmd>bprev<cr>", opts) -- prev buffer
 
 -- Move highlighted up/down
 map("v", "<A-j>", ":m '>+1<cr>gv=gv", opts)
